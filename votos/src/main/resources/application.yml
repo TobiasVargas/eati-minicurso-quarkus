@@ -1,0 +1,11 @@
+quarkus:
+  application:
+    name: votos-service
+  http:
+    port: 8002
+kafka:
+  bootstrap:
+    servers:  localhost:29092
+  auto:
+    offset:
+      reset: earliest
