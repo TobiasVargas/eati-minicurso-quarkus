@@ -13,16 +13,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(schema = "jogadores", name = "jogadores")
-public class Jogador extends PanacheEntityBase {
+@Table(schema = "apuracao", name = "votos")
+public class Voto extends PanacheEntityBase {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "nome")
-	private String nome;
-	@Column(name = "time")
-	private String time;
-	@Column(name = "camisa")
-	private int camisa;
+	@Column(name = "id_jogador")
+	private Long idJogador;
+	@Column(name = "nome_jogador")
+	private String nomeJogador;
+	@Column(name = "time_jogador")
+	private String timeJogador;
+	@Column(name = "camisa_jogador")
+	private int camisaJogador;
 }

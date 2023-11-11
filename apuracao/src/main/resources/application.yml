@@ -21,9 +21,9 @@ kafka:
 clients:
   jogadores/mp-rest/url: http://localhost:8001
   jogadores/mp-rest/scope: javax.inject.Singleton
-#mp:
-#  messaging:
-#    incoming:
-#      voto-computado:
-#        connector: smallrye-kafka
-#        commit-strategy: latest
+mp:
+  messaging:
+    incoming:
+      voto-computado:
+        connector: smallrye-kafka
+        commit-strategy: throttled
